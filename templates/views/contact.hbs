@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Contact Us</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    {{>navbar}}
+
+    <!-- main content  -->
+    <div class="container">
+        <h4 class="contact my-3">WE ARE HERE TO SOLVE YOUR QUERIES</h4>
+        <form method="post" action="/contact">
+            <div class="form-group my-4">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+            </div>
+
+            <div class="form-group my-4">
+                <label for="textarea">Explain your Conern Briefly:</label>
+                <textarea class="form-control" id="textarea" maxlength="400" rows="3" name="query"
+                    placeholder="Share your concern briefly"></textarea>
+            </div>
+
+            <button class="btn btn-success">Submit</button>
+        </form>
+
+    </div>
+
+
+
+    {{>footer}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Details Of Kitchen</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    {{>navbar}}
+    <!-- main content  -->
+    <div class="container mt-3">
+        <div class="mb-3">
+            <h4>Register Yourself</h4>
+        </div>
+        <form method="post" action="/delivery_guy_register">
+            <div class="row g-3 d-flex justify-content-center">
+                <div class="col-sm-6">
+                    <div class="form-outline">
+                        <label for="fullName" class="form-label">Full name</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" placeholder="John Doe"
+                            required>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-outline">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="johnDoe@gmail.com"
+                            required>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-3">
+                    <div class="form-outline">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-outline">
+                        <label for="cpassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="cpassword" name="cpassword" required>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="form-outline">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="Prayagraj" name="city" required>
+                    </div>
+                </div>
+
+                <div class=" text-center px-2">
+                    <button class="btn btn-primary" type="submit">Register</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    {{>footer}}
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

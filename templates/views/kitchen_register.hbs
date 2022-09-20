@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Register Your Kitchen</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    {{>navbar}}
+    <!-- Main body  -->
+
+    <div class="container my-3">
+        <div class="text-center font-monospace">
+            <h3><b>REGISTER YOUR KITCHEN</b></h3>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row g-5">
+            <div class="col">
+                <form method="post" action="/kitchen_register">
+                    <!-- name  -->
+                    <div class="row g-3 d-flex justify-content-around flex-wrap">
+                        <div class="form-outline col-sm-4">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Kanha Shyam" name="fullName" required>
+                        </div>
+
+                        <div class="form-outline col-sm-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Kanha@gmail.com"
+                                name="email" required>
+                        </div>
+                    </div>
+                    <div class="row my-2 g-3 d-flex justify-content-around flex-wrap">
+                        <!-- password -->
+                        <div class="form-outline col-md-4">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+
+                        <div class="form-outline col-md-4">
+                            <label for="cpassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="cpassword" name="cpassword" required>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2 mb-4 g-3 d-flex justify-content-around flex-wrap">
+                        <div class="form-outline col-4">
+                            <label for="address" class="form-label">City</label>
+                            <input type="text" class="form-control" id="address" name="city" maxlength="120"
+                                placeholder="Prayagraj" required>
+                        </div>
+                        <div class="form-outline col-4">
+                            <label for="charge" class="form-label">Charge Per Meal</label>
+                            <input type="number" class="form-control" id="charge" name="charge" required>
+                        </div>
+                    </div>
+
+                    <!-- Meals table  -->
+
+                    <div class="table-responsive-sm">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-10 font-monospace">
+                                <h4 class="table-header text-center"><b>ADD MEAL DETAILS:</b></h4>
+                            </div>
+
+                            <div class="col-10 table-container">
+                                <table class="table table-bordered border border-dark rounded table-warning">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Days</th>
+                                            <th scope="col">Item1</th>
+                                            <th scope="col">Item2</th>
+                                            <th scope="col">Item3</th>
+                                            <th scope="col">Item4</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{!-- sunday --}}
+                                        <tr>
+                                            <th scope="row">Sunday</th>
+                                            <td><input type="text" name="sunday" class="form-outline" required></td>
+                                            <td><input type="text" name="sunday" class="form-outline" required></td>
+                                            <td><input type="text" name="sunday" class="form-outline" required></td>
+                                            <td><input type="text" name="sunday" class="form-outline" required></td>
+                                        </tr>
+                                        {{!-- monday --}}
+                                        <tr>
+                                            <th scope="row">Monday</th>
+                                            <td><input type="text" name="monday" class="form-outline" required></td>
+                                            <td><input type="text" name="monday" class="form-outline" required></td>
+                                            <td><input type="text" name="monday" class="form-outline" required></td>
+                                            <td><input type="text" name="monday" class="form-outline" required></td>
+                                        </tr>
+                                        {{!-- Tuesday --}}
+                                        <tr>
+                                            <th scope="row">Tuesday</th>
+                                            <td><input type="text" name="tuesday" class="form-outline" required></td>
+                                            <td><input type="text" name="tuesday" class="form-outline" required></td>
+                                            <td><input type="text" name="tuesday" class="form-outline" required></td>
+                                            <td><input type="text" name="tuesday" class="form-outline" required></td>
+                                        </tr>
+                                        {{!-- Wednesday --}}
+                                        <tr>
+                                            <th scope="row">Wednesday</th>
+                                            <td><input type="text" name="wednesday" class="form-outline" required></td>
+                                            <td><input type="text" name="wednesday" class="form-outline" required></td>
+                                            <td><input type="text" name="wednesday" class="form-outline" required></td>
+                                            <td><input type="text" name="wednesday" class="form-outline" required></td>
+                                        </tr>
+                                        {{!-- Thursday --}}
+                                        <tr>
+                                            <th scope="row">Thursday</th>
+                                            <td><input type="text" name="thursday" class="form-outline" required></td>
+                                            <td><input type="text" name="thursday" class="form-outline" required></td>
+                                            <td><input type="text" name="thursday" class="form-outline" required></td>
+                                            <td><input type="text" name="thursday" class="form-outline" required></td>
+                                        </tr>
+                                        {{!-- Friday --}}
+                                        <tr>
+                                            <th scope="row">Friday</th>
+                                            <td><input type="text" name="friday" class="form-outline" required></td>
+                                            <td><input type="text" name="friday" class="form-outline" required></td>
+                                            <td><input type="text" name="friday" class="form-outline" required></td>
+                                            <td><input type="text" name="friday" class="form-outline" required></td>
+                                        </tr>
+                                        {{!-- Saturday --}}
+                                        <tr>
+                                            <th scope="row">Saturday</th>
+                                            <td><input type="text" name="saturday" class="form-outline" required></td>
+                                            <td><input type="text" name="saturday" class="form-outline" required></td>
+                                            <td><input type="text" name="saturday" class="form-outline" required></td>
+                                            <td><input type="text" name="saturday" class="form-outline" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

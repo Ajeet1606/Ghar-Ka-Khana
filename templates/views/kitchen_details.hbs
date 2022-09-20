@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Details Of Kitchen</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><b>Ghar Ka Khana</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    {{!-- <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about_us.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../faq.html">FAQs</a>
+                    </li> --}}
+                </ul>
+
+                <form method="post" action="/logout">
+                    <button type="submit" class="btn bg-warning mx-2">Log Out</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Main content  -->
+  <div class="container my-3">
+    <div class="d-flex justify-content-between">
+      <div class="kitchen_name">
+        <h3>{{myKitchen.fullName}}</h3>
+      </div>
+      <div class="location ">
+        <h3>{{myKitchen.city}}</h3>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+
+  <div class="container">
+    <form>
+      <div class="row g-3 d-flex justify-content-around">
+        <div class="col-4 mx-2">
+          <label for="fullName" class="form-label">Full name</label>
+          <input type="text" class="form-control" id="fullName" name="fullName" value="{{myKitchen.fullName}}" readonly>
+        </div>
+
+        <div class="col-4 mx-2">
+          <label for="email" class="form-label">Email</label>
+          <input type="phone" class="form-control" id="email" name="email" value="{{myKitchen.email}}" readonly>
+        </div>
+
+        <div class="col-4 mx-2">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" name="city" value="{{myKitchen.city}}" readonly>
+        </div>
+        <div class="col-4 mx-2">
+          <label for="charge" class="form-label">Charge</label>
+          <input type="text" class="form-control" name="charge" value="{{myKitchen.charge}}" readonly>
+        </div>
+
+        <div class="col-11 table-responsive">
+          <table class="table table-bordered border border-dark rounded table-warning">
+            <thead>
+              <tr>
+                <th scope="col">Days</th>
+                <th scope="col">Item1</th>
+                <th scope="col">Item2</th>
+                <th scope="col">Item3</th>
+                <th scope="col">Item4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Sunday</th>
+                <td><input type="text" value="{{myKitchen.sunday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.sunday.[1]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.sunday.[2]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.sunday.[3]}}" readonly></td>
+              </tr>
+              <tr>
+                <th scope="row">Monday</th>
+                <td><input type="text" value="{{myKitchen.monday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.monday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.monday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.monday.[0]}}" readonly></td>
+              </tr>
+              <tr>
+                <th scope="row">Tuesday</th>
+                <td><input type="text" value="{{myKitchen.tuesday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.tuesday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.tuesday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.tuesday.[0]}}" readonly></td>
+              </tr>
+              <tr>
+                <th scope="row">Wednesday</th>
+                <td><input type="text" value="{{myKitchen.wednesday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.wednesday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.wednesday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.wednesday.[0]}}" readonly></td>
+              </tr>
+              <tr>
+                <th scope="row">Thursday</th>
+                <td><input type="text" value="{{myKitchen.thursday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.thursday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.thursday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.thursday.[0]}}" readonly></td>
+              </tr>
+              <tr>
+                <th scope="row">Friday</th>
+                <td><input type="text" value="{{myKitchen.friday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.friday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.friday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.friday.[0]}}" readonly></td>
+              </tr>
+              <tr>
+                <th scope="row">Saturday</th>
+                <td><input type="text" value="{{myKitchen.saturday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.saturday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.saturday.[0]}}" readonly></td>
+                <td><input type="text" value="{{myKitchen.saturday.[0]}}" readonly></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- Checkout  -->
+
+  <div class="container my-5">
+    <div class="checkout text-center">
+      <a href="/placeOrder" class="btn btn-primary" id="hover_it">Place Order</a>
+    </div>
+  </div>
+
+
+  {{>footer}}
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

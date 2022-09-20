@@ -1,0 +1,42 @@
+
+#hover_btn{
+    transition: all 0.2s ease;
+    /* cursor: pointer; */
+}
+
+.card:hover{
+    box-shadow: 5px 6px 5px 2px #666768;
+}
+
+#hover_btn:hover{
+    box-shadow: 0 0 5px white;
+    transform: scale(1.1);
+}
+
+#how_we_work{
+    transition: all 0.2s ease;
+}
+
+#how_we_work:hover{
+    box-shadow: 5px 6px 5px 2px #666768;
+    transform: scale(1.1);
+}
+
+.navbar .collapse .navbar-nav .nav-item a:hover{
+    color: white;
+}
+
+.checkedStar{
+    color: orange;
+}
+
+
+#hover_it_user{
+    transition: all 0.2s ease;
+    /* cursor: pointer; */
+}
+
+#hover_it_user:hover{
+    box-shadow: 5px 6px 5px 2px #666768;
+    transform: scale(1.1);
+}
