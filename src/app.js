@@ -14,7 +14,7 @@ const bcrypt = require('bcryptjs/dist/bcrypt');
 const res = require('express/lib/response');
 
 // const async = require('hbs/lib/async');
-const mongoURI = "mongodb+srv://ajeetPatel:ORTEUWUTRI@cluster0.twosh8o.mongodb.net/GharKaKhana?retryWrites=true&w=majority"
+const mongoURI = "mongodb+srv://ajeetPatel:**********@cluster0.twosh8o.mongodb.net/GharKaKhana?retryWrites=true&w=majority"
 
 const app = express();
 const port = process.env.PORT || 3000;
