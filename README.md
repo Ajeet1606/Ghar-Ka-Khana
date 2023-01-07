@@ -5,3 +5,8 @@ We've also made a provision for connecting delivery boys to kitchen owners who w
 
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/54282815/211126385-58f65e74-2c59-4168-a64d-3992584fd8f6.png">
 
+## Tech Stack
+
+Frontend: Bootstrap in HandleBars & CSS
+Backend: Express JS
+Database: Mongo DB(Mongoose).
